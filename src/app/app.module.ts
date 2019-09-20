@@ -8,8 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-import { MainLayoutComponent } from './main-layout/main-layout.component';
 
+import { GridResponsiveComponent } from './components/grid-responsive/grid-responsive.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 
 registerLocaleData(zh);
@@ -17,7 +18,11 @@ registerLocaleData(zh);
 @NgModule({
   declarations: [
     AppComponent,
+
+    GridResponsiveComponent,
+
     MainLayoutComponent,
+
 
   ],
   imports: [
