@@ -11,30 +11,47 @@
         <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
           <li nz-menu-item>
             <i nz-icon nzType="user"></i>
-            <span>nav 1</span>
+            <span>数据概览</span>
           </li>
           <li nz-menu-item>
             <i nz-icon nzType="video-camera"></i>
-            <span>nav 2</span>
+            <span>数据管理</span>
+          </li>
+          <li nz-submenu nzTitle="数据管理" nzIcon="appstore">
+            <ul>
+              <li nz-menu-item>架构调整</li>
+              <li nz-menu-item>导入</li>
+              <li nz-menu-item>导出</li>
+              
+            </ul>
           </li>
           <li nz-menu-item>
             <i nz-icon nzType="upload"></i>
-            <span>nav 3</span>
+            <span>用户管理</span>
           </li>
           <li nz-menu-item>
             <i nz-icon nzType="user"></i>
-            <span>nav 4</span>
+            <span>设置</span>
           </li>
         </ul>
       </nz-sider>
       <nz-layout>
-        <nz-header></nz-header>
+        <nz-header>
+          
+          <h1>
+              <p style="text-indent:2em"> “一带一路”重大工程地球大数据监测与分析平台</p>
+           </h1>
+        
+        </nz-header>
         <nz-content>
           <div class="inner-content">
-            Content
+            
+            <app-grid-responsive>
+              dsdsdsdsdsd
+            </app-grid-responsive>
           </div>
         </nz-content>
-        <nz-footer>Ant Design ©2019 Implement By Angular</nz-footer>
+        <nz-footer>中科院遥感所©2019 Implement by 325851193@qq.com</nz-footer>
       </nz-layout>
     </nz-layout>
     <ng-template #zeroTrigger>
