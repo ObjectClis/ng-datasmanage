@@ -13,15 +13,12 @@
             <i nz-icon nzType="user"></i>
             <span>数据概览</span>
           </li>
-          <li nz-menu-item>
-            <i nz-icon nzType="video-camera"></i>
-            <span>数据管理</span>
-          </li>
+
           <li nz-submenu nzTitle="数据管理" nzIcon="appstore">
             <ul>
-              <li nz-menu-item>架构调整</li>
               <li nz-menu-item>导入</li>
               <li nz-menu-item>导出</li>
+              <li nz-menu-item>架构管理</li>
               
             </ul>
           </li>
@@ -44,11 +41,9 @@
         
         </nz-header>
         <nz-content>
-          <div class="inner-content">
+          <div id='active-window' class="inner-content">
             
-            <app-grid-responsive>
-              dsdsdsdsdsd
-            </app-grid-responsive>
+            <app-grid-responsive ></app-grid-responsive>
           </div>
         </nz-content>
         <nz-footer>中科院遥感所©2019 Implement by 325851193@qq.com</nz-footer>
