@@ -14,6 +14,9 @@ import { CascaderLazyloadComponent } from './components/cascader-lazyload/cascad
 import { DatastableComponent } from './components/datastable/datastable.component';
 import { BtnSizeComponent } from './components/btn-size/btn-size.component';
 import { TableCustomComponent } from './components/table-custom/table-custom.component';
+import { DatasManagePageComponent } from './pages/datas-manage-page/datas-manage-page.component';
+import { OverviewComponent } from './pages/overview/overview.component';
+
 
 registerLocaleData(zh);
 
@@ -26,7 +29,8 @@ registerLocaleData(zh);
     DatastableComponent,
     BtnSizeComponent,
     TableCustomComponent,
-
+    DatasManagePageComponent,
+    OverviewComponent,
   ],
   imports: [
     BrowserModule,

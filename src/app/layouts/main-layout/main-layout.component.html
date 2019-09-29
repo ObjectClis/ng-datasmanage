@@ -9,25 +9,25 @@
       >
         <div class="logo"></div>
         <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-          <li nz-menu-item>
+          <li nzSelected nz-menu-item (click)="this.pageSelected='overview'">
             <i nz-icon nzType="user"></i>
             <span>数据概览</span>
           </li>
 
           <li nz-submenu nzTitle="数据管理" nzIcon="appstore">
             <ul>
-              <li nz-menu-item>导入</li>
-              <li nz-menu-item>导出</li>
-              <li nz-menu-item>架构管理</li>
+              <li nz-menu-item (click)="this.pageSelected='datasimport'">导入</li>
+              <li nz-menu-item (click)="this.pageSelected='datasoutput'">导出</li>
+              <li nz-menu-item (click)="this.pageSelected='archmanage'">架构管理</li>
               
             </ul>
           </li>
-          <li nz-menu-item>
+          <li nz-menu-item (click)="this.pageSelected='usersmanage'">
             <i nz-icon nzType="upload"></i>
             <span>用户管理</span>
           </li>
-          <li nz-menu-item>
-            <i nz-icon nzType="user"></i>
+          <li nz-menu-item (click)="this.pageSelected='settings'">
+            <i nz-icon  nzType="user"></i>
             <span>设置</span>
           </li>
         </ul>
@@ -41,10 +41,29 @@
         
         </nz-header>
         <nz-content>
-          <div id='active-window' class="inner-content">
-            
-            <app-grid-responsive ></app-grid-responsive>
+          <div id='active-window' class="inner-content" [ngSwitch]="this.pageSelected">
+     
+
+            <app-overview *ngSwitchCase="'overview'">
+              这里是数据概览内容
+            </app-overview>
+            <app-datas-manage-page *ngSwitchCase="'datasimport'"></app-datas-manage-page>
+            <ng-container *ngSwitchCase="'datasoutput'">
+              这里是导出内容
+            </ng-container>
+            <ng-container *ngSwitchCase="'archmanage'">
+              这里是架构管理内容
+            </ng-container>
+            <ng-container *ngSwitchCase="'usersmanage'">
+              这里是用户管理内容
+            </ng-container>
+            <ng-container *ngSwitchCase="'settings'">
+              这里是设置内容
+            </ng-container>
+           
+            <app-overview *ngSwitchDefault></app-overview>
           </div>
+
         </nz-content>
         <nz-footer>中科院遥感所©2019 Implement by 325851193@qq.com</nz-footer>
       </nz-layout>
